@@ -12,7 +12,7 @@ public class CreateTable {
 		{
 			con=JDBCUtil.getOracleConnection();
 			String query = "create table employee(eno number(10),ename varchar2(20),"
-					+ "email varchar2(20),mobileno number(10),doj Date)";
+					+ "email varchar2(20),mobileno number(10),address varchar2(20),sal number )";
 			st=con.createStatement();
 			int row_affected=st.executeUpdate(query);
 			System.out.println(row_affected+" Table created Successfully");
