@@ -19,13 +19,14 @@ public class JDBCUtil {
 	}
 	public static Connection getOracleConnection()throws IOException {
 		Connection con = null;
-		/*Properties p=new Properties();
+		Properties p = new Properties();
 		FileInputStream fis=new FileInputStream("oracledatabase.properties");
-		p.load(fis);*/
 		
-		String url = "jdbc:oracle:thin:@localhost:9090:XE";//p.getProperty("url");
-		String user = "ksh";//p.getProperty("username");
-		String password = "ksh";//p.getProperty("password");
+		p.load(fis);
+		
+		String url = p.getProperty("url");
+		String user = p.getProperty("username");
+		String password = p.getProperty("password");
 		try {
 			con=DriverManager.getConnection(url, user, password);
 		}
