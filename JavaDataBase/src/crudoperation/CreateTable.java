@@ -11,8 +11,8 @@ public class CreateTable {
 		try 
 		{
 			con=JDBCUtil.getOracleConnection();
-			String query = "create table student(rollNo number(10),name varchar2(20),email varchar2(20),marks number(3),"
-					+ "address varchar2(20),mobileno number(10))";
+			String query = "create table employee(eno number(10),ename varchar2(20),"
+					+ "email varchar2(20),mobileno number(10),doj Date)";
 			st=con.createStatement();
 			int row_affected=st.executeUpdate(query);
 			System.out.println(row_affected+" Table created Successfully");
