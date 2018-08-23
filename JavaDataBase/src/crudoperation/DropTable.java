@@ -10,7 +10,7 @@ public class DropTable {
 		Statement st = null;
 		try {
 			con = JDBCUtil.getOracleConnection();
-			String qString = "drop table employee";
+			String qString = "drop table employees";
 			st = con.createStatement();
 			int res = st.executeUpdate(qString);
 			if(res!=0)

@@ -11,7 +11,7 @@ public class CreateTable {
 		try 
 		{
 			con=JDBCUtil.getOracleConnection();
-			String query = "create table employee(eno number(10),ename varchar2(20),"
+			String query = "create table employees(eno number(10),ename varchar2(20),"
 					+ "email varchar2(20),mobileno number(10),address varchar2(20),sal number )";
 			st=con.createStatement();
 			int row_affected=st.executeUpdate(query);
