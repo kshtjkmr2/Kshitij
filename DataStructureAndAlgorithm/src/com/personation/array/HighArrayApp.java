@@ -17,6 +17,12 @@ public class HighArrayApp {
 		arr.insertElement(42);
 		arr.insertElement(89);
 		arr.insertElement(82);
+		arr.insertElement(88);
+		arr.insertElement(72);
+		arr.insertElement(22);
+		arr.insertElement(92);
+		arr.insertElement(12);
+		
 		System.out.println("Display Element");
 		arr.displayArray();
 		System.out.println("\nEnter Element to be search");
