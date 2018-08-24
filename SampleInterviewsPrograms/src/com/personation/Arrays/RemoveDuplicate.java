@@ -17,6 +17,8 @@ public class RemoveDuplicate {
 
 	}
 	public static void removeduplicate(int[] arr,int len) {
+		int[] res = new int[len];
+		int k = 0;
 		if(len==0||len==1) {
 			display(arr,len);
 		}
@@ -28,12 +30,17 @@ public class RemoveDuplicate {
 				}
 			}
 		}
-		display(arr,len);
+		for(i = 0 ; i < len ;  i++) {
+			if(arr[i] != 0)
+				res[k++] = arr[i]; 
+			   len--;
+		}
+		display(res,len);
 	}
-	private static void display(int[] arr, int len) {
+	private static void display(int[] res, int k) {
 		
-		for (int j2 = 0; j2 < arr.length; j2++) {
-			System.out.print(arr[j2]+ " ");
+		for (int j2 = 0; j2 < k; j2++) {
+			System.out.print(res[j2]+ " ");
 		}
 		
 	}
