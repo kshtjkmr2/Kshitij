@@ -20,16 +20,13 @@ public class RemoveDuplicate {
 		if(len==0||len==1) {
 			display(arr,len);
 		}
-		int temp;
 		int i,j;
 		for(i = 0; i < arr.length ; i++) {
 			for(j = i+1 ; j<arr.length; j++) {
 				if(arr[i] == arr[j]) {
-					temp = arr[j];
-					
+					arr[j] = 0;
 				}
 			}
-			
 		}
 		display(arr,len);
 	}
